@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-before_action :authenticate, only: [:create]
+before_action :authenticate, only: [:index, :create]
 
     def index
         @items = Item.all 
@@ -20,6 +20,11 @@ before_action :authenticate, only: [:create]
             user_id: params[:user_id]
         )
         render json: @item
+    end
+
+    def destroy
+        @item = Item.find(params[:id])
+        @item.destroy
     end
 
 end
