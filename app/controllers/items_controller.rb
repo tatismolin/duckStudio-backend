@@ -22,4 +22,9 @@ before_action :authenticate, only: [:index, :create]
         render json: @item
     end
 
+    def destroy
+        @item = Item.find(params[:id])
+        @item.destroy
+    end
+
 end
