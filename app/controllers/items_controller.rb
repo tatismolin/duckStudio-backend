@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-before_action :authenticate, only: [:index, :create]
+skip_before_action :authenticate, except: [:index, :create]
 
     def index
         @items = Item.all 

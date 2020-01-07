@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
 
+    skip_before_action :authenticate, except: [:profile]
+
+    def profile
+        render json: @user, includes: [:items]
+    end
+
     def create
         @user = User.new(user_params)
 
