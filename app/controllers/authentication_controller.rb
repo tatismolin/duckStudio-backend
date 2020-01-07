@@ -1,5 +1,7 @@
 class AuthenticationController < ApplicationController
 
+    skip_before_action :authenticate
+
     def login 
         user = User.find_by({username: params[:username]})
 
@@ -14,7 +16,7 @@ class AuthenticationController < ApplicationController
                     user_id: user.id,
                 }, secret_key)
 
-                render json: {token: token}
+                render json: {token: token, user: user}
             end
         end
     end
