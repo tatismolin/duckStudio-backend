@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "profile", to: "users#profile"
   post "cart", to: "user_items#cart"
   get "cart", to: "user_items#cart"
+  # get "store", to: "index#store"
 end
