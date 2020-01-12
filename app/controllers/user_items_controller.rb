@@ -13,6 +13,11 @@ class UserItemsController < ApplicationController
         end
     end
 
+    def show
+        @user_items = UserItem.all
+        render json: @user_items
+    end
+
     def index
         @user_item = UserItem.find(params[:id]) 
         render json: @user_item
@@ -21,7 +26,7 @@ class UserItemsController < ApplicationController
     private
 
     def user_item_params
-        params.permit(:user_id, :item_id)
+        params.permit(:user_id, :item_id, :quantity)
     end
 
 end
