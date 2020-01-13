@@ -23,6 +23,14 @@ class UserItemsController < ApplicationController
         render json: @user_item
     end
 
+    def delete
+        cartItem = UserItem.find{|userItem| userItem.item_id === params[:item_id] && userItem.user_id === params[:user_id]}
+        if(cartItem)
+            @cartItem.destroy
+        end
+       
+    end
+
     private
 
     def user_item_params
