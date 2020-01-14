@@ -23,18 +23,15 @@ class UserItemsController < ApplicationController
         render json: @user_item
     end
 
-    def delete
-        cartItem = UserItem.find{|userItem| userItem.item_id === params[:item_id] && userItem.user_id === params[:user_id]}
-        if(cartItem)
-            @cartItem.destroy
-        end
-       
+    def destroy
+        @user_item = UserItem.find(params[:id]) 
+        @user_item.destroy
     end
 
     private
 
     def user_item_params
-        params.permit(:user_id, :item_id, :quantity)
+        params.permit(:user_id, :item_id, :quantity).merge(quantity: 1)
     end
 
 end
