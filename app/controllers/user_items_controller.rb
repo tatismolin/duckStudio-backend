@@ -5,7 +5,7 @@ class UserItemsController < ApplicationController
     def cart
         cartItem = UserItem.find{|userItem| userItem.item_id === params[:item_id] && userItem.user_id === params[:user_id]}
         if(cartItem)
-            cartItem.update(quantity: cartItem.quantity + 1)
+            cartItem.update(quantity: cartItem.quantity += 1)
             render json: cartItem
         else
             @user_item = UserItem.create(user_item_params)
