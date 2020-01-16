@@ -1,7 +1,5 @@
 class UserItemsController < ApplicationController
 
-    skip_before_action :authenticate
-
     def cart
         cartItem = UserItem.find{|userItem| userItem.item_id === params[:item_id] && userItem.user_id === params[:user_id]}
         if(cartItem)
@@ -14,7 +12,7 @@ class UserItemsController < ApplicationController
     end
 
     def show
-        @user_items = UserItem.all
+        @user_items = @user.user_items
         render json: @user_items
     end
 
