@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "profile", to: "users#profile"
   post "cart", to: "user_items#cart"
   get "show", to: "user_items#show"
+  post "charges", to: "charges#create"
   # delete "delete/:id", to: "user_items#destroy"
   # get "store", to: "index#store"
 end
