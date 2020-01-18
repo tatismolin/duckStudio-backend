@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :items, only: [:index, :show, :create]
+  resources :items, only: [:index, :show, :create, :update]
   resources :users, only: [:create]
   resources :user_items, only: [:index, :show, :create, :destroy]
 
@@ -9,6 +9,5 @@ Rails.application.routes.draw do
   post "cart", to: "user_items#cart"
   get "show", to: "user_items#show"
   post "charges", to: "charges#create"
-  # delete "delete/:id", to: "user_items#destroy"
   # get "store", to: "index#store"
 end

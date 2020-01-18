@@ -11,9 +11,15 @@ class UserItemsController < ApplicationController
         end
     end
 
+    # def update
+    #     @user_item = UserItem.find(params[:id]) 
+    #     @user_item.update(user_item_params)
+    #     render json: @user_item
+    # end
+
     def show
         @user_items = @user.user_items
-        render json: @user_items
+        render json: @user_items 
     end
 
     def index
