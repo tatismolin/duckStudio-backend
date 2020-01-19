@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   post "cart", to: "user_items#cart"
   get "show", to: "user_items#show"
   post "charges", to: "charges#create"
-  # get "store", to: "index#store"
 end
