@@ -13,7 +13,7 @@ class ChargesController < ApplicationController
         )
 
         charge = Stripe::Charge.create({
-            amount: 100,
+            amount: params[:amount].to_i * 100,
             currency: "usd",
             customer: customer.id,
             receipt_email: params[:token][:email],
