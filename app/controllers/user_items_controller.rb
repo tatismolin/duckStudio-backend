@@ -3,7 +3,11 @@ class UserItemsController < ApplicationController
     def cart
         cartItem = UserItem.find{|userItem| userItem.item_id === params[:item_id] && userItem.user_id === params[:user_id]}
         if(cartItem)
-            cartItem.update(quantity: cartItem.quantity += 1)
+            if(params[:step] == "add")
+                cartItem.update(quantity: cartItem.quantity += 1)
+            elsif(params[:step] == "subtract")
+                cartItem.update(quantity: cartItem.quantity -= 1)
+            end
             render json: cartItem
         else
             @user_item = UserItem.create(user_item_params)
@@ -11,11 +15,11 @@ class UserItemsController < ApplicationController
         end
     end
 
-    # def update
-    #     @user_item = UserItem.find(params[:id]) 
-    #     @user_item.update(user_item_params)
-    #     render json: @user_item
-    # end
+    def update
+        @user_item = UserItem.find(params[:id]) 
+        @user_item.update(user_item_params)
+        render json: @user_item
+    end
 
     def show
         @user_items = @user.user_items
