@@ -8,25 +8,29 @@ class ChargesController < ApplicationController
         Stripe.api_key = "sk_test_7p9Uk5wzXySyenTCLQMGTuvR00dxls3gHd"
 
         customer = Stripe::Customer.create(
-            email: params[:email],
-            source: params[:id]
+            email: params[:token][:email],
+            source: params[:token][:id]
         )
 
-        charge = Stripe::Charge.create(
+        charge = Stripe::Charge.create({
+            amount: 100,
+            currency: "usd",
             customer: customer.id,
-            receipt_email: params[:email],
+            receipt_email: params[:token][:email],
+            description: "Duck",
             shipping: {
-                name: params[:card][:name],
+                name: params[:token][:card][:name],
                 address: {
-                    line1: params[:card][:address_line1],
-                    line2: params[:card][:address_line2],
-                    city: params[:card][:address_city],
-                    country: params[:card][:address_country],
-                    postal_code: params[:card][:address_zip]
+                    line1: params[:token][:card][:address_line1],
+                    line2: params[:token][:card][:address_line2],
+                    city: params[:token][:card][:address_city],
+                    country: params[:token][:card][:address_country],
+                    postal_code: params[:token][:card][:address_zip]
                 }
-            }, 
-            idempotency_key: ip_key
-        )
+            }
+        },{
+            idempotency_key: params[:ip_key]
+        })
     end
 
 end
