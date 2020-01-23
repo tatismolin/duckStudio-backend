@@ -11,12 +11,12 @@ User.destroy_all
 
 user1 = User.create(username: "duck007", password: "123qwerty!")
 
-Item.create(name: "Yellow Duck", description: "This Yellow rubber Duck is a perfect companion for code debugging, selfies or bath taking.
+Item.create(name: "Ahmed's console.log(duck)", description: "This Yellow rubber Duck is a perfect companion for code debugging, selfies or bath taking.
 Take it with you wherever you go and have fun!", price: "99.99", image: "https://i.ibb.co/ys85kBy/c-yellow-duck.jpg")
 Item.create(name: "Special Edition Red Duck", description: "This Special Edition Red rubber Duck is a perfect companion for code debugging, selfies or bath taking.
 Take it with you wherever you go and have fun!", price: "99.99", image: "https://i.ibb.co/qDVj0D1/c-red-duck.jpg")
-Item.create(name: "Tatiana's Favorite Black Duck", description: "This Tatiana's Favorite Black rubber Duck is the best duck you could ever dream of. It is luxuary, special and smells like daisy.", price: "99.99", image: "https://i.ibb.co/xCKm8kb/b-black-duck.jpg")
-Item.create(name: "Special Edition Orange Duck", description: "This Special Edition Orange rubber Duck is a perfect companion for code debugging, selfies or bath taking.
+Item.create(name: "My Favorite Black Duck", description: "This Tatiana's Favorite Black rubber Duck is the best duck you could ever dream of. It is luxuary, special and smells like daisy.", price: "99.99", image: "https://i.ibb.co/xCKm8kb/b-black-duck.jpg")
+Item.create(name: "Special Edition O Duck", description: "This Special Edition Orange rubber Duck is a perfect companion for code debugging, selfies or bath taking.
 Take it with you wherever you go and have fun!", price: "99.99", image: "https://i.ibb.co/DDgF1vP/c-orange-duck.jpg")
 Item.create(name: "Malina Russian Duck", description: "This Malina Russian rubber Duck is a perfect companion for code debugging, selfies or bath taking.
 Take it with you when you go to Russia and 'Privet! Vodka! Na Zdorovie!'", price: "99.99", image: "https://i.ibb.co/KXZmBBq/c-malina-duck.jpg")
@@ -34,7 +34,7 @@ Item.create(name: "Light Gray Duck", description: "This Light Purple rubber Duck
 Take it with you wherever you go and have fun!", price: "99.99", image: "https://i.ibb.co/4JrZZpr/b-lightpurple-duck.jpg")
 Item.create(name: "Weird Green Duck", description: "This Weird Green rubber Duck is a perfect companion for code debugging, selfies or bath taking.
 Take it with you wherever you go and have fun!", price: "99.99", image: "https://i.ibb.co/JjB2Hs4/b-weirdgreen-duck.jpg")
-Item.create(name: "Special Edition Purple Duck", description: "This Special Editon Purple rubber Duck is a perfect companion for code debugging, selfies or bath taking.
+Item.create(name: "Very Special Purple Duck", description: "This Special Editon Purple rubber Duck is a perfect companion for code debugging, selfies or bath taking.
 Take it with you wherever you go and have fun!", price: "99.99", image: "https://i.ibb.co/rbmfv0B/c-purple-duck.jpg")
 Item.create(name: "Aqua Duck", description: "This Aqua rubber Duck is a perfect companion for code debugging, selfies or bath taking.
 Take it with you wherever you go and have fun!", price: "99.99", image: "https://i.ibb.co/g7nR3p9/a-aqua-duck.jpg")
