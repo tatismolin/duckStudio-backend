@@ -5,7 +5,7 @@
 
 Duck Studio is an e-commerce website that offers cute little rubber ducks for sale. Website visitors can sign-up, login and start shopping. Checkout is available with Stripe payment system. Created using responsive design. Written in JavaScript/React on frontend and Ruby on Rails on a backend. Deployed on Heroku/Firebase.
 
-![background](./pictures/DuckStudio.gif)
+![background](./pictures/DuckStudio1.gif)
 
 **Demo:** [YouTube](https://youtu.be/MclkO367ARY)
 
