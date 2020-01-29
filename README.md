@@ -35,7 +35,7 @@ Duck Studio is an e-commerce website that offers cute little rubber ducks for sa
 
 
 **Future features:**
-- [ ] init tests;
+- [ ] unit tests;
 - [ ] suggested items;
 - [ ] favorite items;
 - [ ] user profile;
