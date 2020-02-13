@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   post "login", to: "authentication#login"
   get "profile", to: "users#profile"
-  post "create", to: "user_items#create"
+  post "cart", to: "user_items#cart"
   get "show", to: "user_items#show"
   post "charges", to: "charges#create"
 end
