@@ -24,12 +24,6 @@ ActiveRecord::Schema.define(version: 2020_01_10_184250) do
     t.string "image"
   end
 
-  create_table "snowflakes", force: :cascade do |t|
-    t.string "shape"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "user_items", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "item_id"
