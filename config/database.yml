@@ -78,6 +78,10 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: backend_production
+# production:
+#   <<: *default
+#   database: backend_production
+#   username: backend
+#   password: <%= ENV['BACKEND_DATABASE_PASSWORD'] %>
+
+production:  <<: *default  database: <%= ENV['RDS_DB_NAME'] %>  username: <%= ENV['RDS_USERNAME'] %>  password: <%= ENV['RDS_PASSWORD'] %>  host: <%= ENV['RDS_HOSTNAME'] %>  port: <%= ENV['RDS_PORT'] %>
